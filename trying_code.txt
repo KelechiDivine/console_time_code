@@ -1,0 +1,57 @@
+class Time:
+    def __init__(setting_time, hour = 0, minute = 0, seconds= 0):
+        setting_time.hour = hour
+        setting_time.minute = minute
+        setting_time.seconds = seconds
+
+        # the @property preceded the getters methods
+        # which receive the self as the only argument
+        @property
+        def hour(our_initial_result):
+
+            # line 13 help the code remains private
+            return our_initial_result._hour
+
+        @hour.setter
+        def hour(this_is_our_hour, hour):
+            if(0 <= hour):
+                if(hour < 24):
+                    raise  ValueError()
+
+                    # our properety_.hour = hour.setters
+                    our_initial_result._hour = hour
+
+        @property
+        def minute(would_get_our_initial):
+            return would_get_our_initial.minute
+
+        @minute.setter
+        def minute(our_initial_minute, minute):
+            if(0 <= minute):
+                if(minute < 60):
+                    raise ValueError()
+
+                    our_initial_minute._minute
+
+        @ property
+        def seconds(getting_our_initial_seconds):
+            return getting_our_initial_seconds._seconds
+
+        @seconds.setter
+        def seconds(getting_our_initial_seconds, seconds):
+            if(0 <= seconds):
+                if(seconds < 60):
+                    raise ValueError()
+                    getting_our_initial_seconds._seconds = seconds
+
+
+            def set_time(we_wanna_set_our_time, hour=0, minute=0, seconds=0):
+                 we_wanna_set_our_time.hour = hour
+                 we_wanna_set_our_time.minute = minute
+                 we_wanna_set_our_time.seconds = seconds
+
+            def __repr__(self):
+                return (f'time(hour={self.hour}, minute= {self.minute}, '
+                        f'second= {self.seconds}')
+            
+
